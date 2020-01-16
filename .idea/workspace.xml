@@ -6,7 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38914c9f-18d8-4004-bb72-298a58e7bfe9" name="Default Changelist" comment="" />
+    <list default="true" id="38914c9f-18d8-4004-bb72-298a58e7bfe9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/commands/FragmentosCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/commands/FragmentosCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/InventoryClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/InventoryClick.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +27,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\rafap\OneDrive\IntelliJ\Minecraft\LeafFragmentos\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1WSTWPABSqWJxvMoI8dN5AEa17l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -30,8 +43,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Área de Trabalho" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -39,6 +54,9 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rafap\OneDrive\IntelliJ\Minecraft\LeafFragmentos" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="me.czergames.fragmentos.commands" />
     </key>
@@ -71,17 +89,34 @@
       <workItem from="1579189155502" duration="618000" />
       <workItem from="1579191897556" duration="3751000" />
       <workItem from="1579197763870" duration="8935000" />
+      <workItem from="1579209691063" duration="1889000" />
     </task>
+    <task id="LOCAL-00001" summary="Projeto Inicial">
+      <created>1579209894589</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579209894589</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Projeto Inicial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projeto Inicial" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="164" key="#com.intellij.ide.util.MemberChooser" timestamp="1579202477953">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
     <state x="445" y="164" key="#com.intellij.ide.util.MemberChooser/0.0.1280.920@0.0.1280.920" timestamp="1579202477953" />
+    <state x="207" y="0" key="CommitChangelistDialog2" timestamp="1579209892597">
+      <screen x="0" y="0" width="1280" height="920" />
+    </state>
+    <state x="207" y="0" key="CommitChangelistDialog2/0.0.1280.920@0.0.1280.920" timestamp="1579209892597" />
     <state x="420" y="215" key="FileChooserDialogImpl" timestamp="1579204790583">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
@@ -90,6 +125,10 @@
       <screen x="0" y="0" width="1280" height="920" />
     </state>
     <state x="120" y="35" key="SettingsEditor/0.0.1280.920@0.0.1280.920" timestamp="1579204796606" />
+    <state x="232" y="189" key="Vcs.Push.Dialog.v2" timestamp="1579209903973">
+      <screen x="0" y="0" width="1280" height="920" />
+    </state>
+    <state x="232" y="189" key="Vcs.Push.Dialog.v2/0.0.1280.920@0.0.1280.920" timestamp="1579209903973" />
     <state x="22" y="40" key="new project wizard" timestamp="1579191795281">
       <screen x="0" y="0" width="1280" height="920" />
     </state>

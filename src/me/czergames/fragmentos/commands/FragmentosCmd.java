@@ -10,7 +10,9 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class FragmentosCmd implements CommandExecutor {
 	
@@ -24,17 +26,13 @@ public class FragmentosCmd implements CommandExecutor {
 				"§7profundezas de uma tenebrosa caverna no sul da Rússia.\"",
 				"",
 				"§fTipo: §bCristal",
-				"§fRaridade: §7Comum",
-				"",
-				"§eClique esquerdo para retirar um",
-				"§eShift + Clique esquerdo para retirar todos",
-				"§6Clique direito para depositar um",
-				"§6Shift + Clique direito para depositar todos"
+				"§fRaridade: §7Comum"
 		));
 		item.setItemMeta(itemmeta);
 		
 		return item;
 	}
+	
 	public static ItemStack getRuby() {
 		ItemStack item = CustomSkull.getSkull("2530191500c2453624dd937ec125d44f0942cc2b664073e2a366b3fa67a0c897");
 		ItemMeta itemmeta = item.getItemMeta();
@@ -45,17 +43,13 @@ public class FragmentosCmd implements CommandExecutor {
 				"§7Eu não acho que algum dia torne-se mais valioso...\"",
 				"",
 				"§fTipo: §cRuby",
-				"§fRaridade: §aIncomum",
-				"",
-				"§eClique esquerdo para retirar um",
-				"§eShift + Clique esquerdo para retirar todos",
-				"§6Clique direito para depositar um",
-				"§6Shift + Clique direito para depositar todos"
+				"§fRaridade: §aIncomum"
 		));
 		item.setItemMeta(itemmeta);
 		
 		return item;
 	}
+	
 	public static ItemStack getVulcanic() {
 		ItemStack item = CustomSkull.getSkull("c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071");
 		ItemMeta itemmeta = item.getItemMeta();
@@ -67,17 +61,13 @@ public class FragmentosCmd implements CommandExecutor {
 				"§7Cuidado: A rocha ainda se encontra quente!\"",
 				"",
 				"§fTipo: §6Rocha Vulcânica",
-				"§fRaridade: §bRaro",
-				"",
-				"§eClique esquerdo para retirar um",
-				"§eShift + Clique esquerdo para retirar todos",
-				"§6Clique direito para depositar um",
-				"§6Shift + Clique direito para depositar todos"
+				"§fRaridade: §bRaro"
 		));
 		item.setItemMeta(itemmeta);
 		
 		return item;
 	}
+	
 	public static ItemStack getRadioactive() {
 		ItemStack item = CustomSkull.getSkull("dc6bacd36ed60f533138e759c425946222b78eda6b616216f6dcc08e90d33e");
 		ItemMeta itemmeta = item.getItemMeta();
@@ -88,18 +78,14 @@ public class FragmentosCmd implements CommandExecutor {
 				"§7Apesar de ser altamente radioativo, cientistas",
 				"§7descobriram uma forma de conter esta radiação!\"",
 				"",
-				"§fTipo: §aRocha Vulcânica",
-				"§fRaridade: §bÉpico",
-				"",
-				"§eClique esquerdo para retirar um",
-				"§eShift + Clique esquerdo para retirar todos",
-				"§6Clique direito para depositar um",
-				"§6Shift + Clique direito para depositar todos"
+				"§fTipo: §aRocha Radioativa",
+				"§fRaridade: §bÉpico"
 		));
 		item.setItemMeta(itemmeta);
 		
 		return item;
 	}
+	
 	public static ItemStack getMystic() {
 		ItemStack item = CustomSkull.getSkull("9c425ea9c4a4cbd123a9ffd4a0ba7480e7c515423dd730fb9fb643c18490107f");
 		ItemMeta itemmeta = item.getItemMeta();
@@ -111,12 +97,7 @@ public class FragmentosCmd implements CommandExecutor {
 				"§7dizem ser muito valioso!\"",
 				"",
 				"§fTipo: §d???",
-				"§fRaridade: §5Místico",
-				"",
-				"§eClique esquerdo para retirar um",
-				"§eShift + Clique esquerdo para retirar todos",
-				"§6Clique direito para depositar um",
-				"§6Shift + Clique direito para depositar todos"
+				"§fRaridade: §5Místico"
 		));
 		item.setItemMeta(itemmeta);
 		
@@ -125,53 +106,53 @@ public class FragmentosCmd implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
-		if(sender instanceof Player) {
+		if (sender instanceof Player) {
 			Player p = (Player) sender;
 			
-			if(p.hasPermission("leaffragmentos.admin")) {
-				if(args.length == 4) {
-					if(args[0].equalsIgnoreCase("give")) {
-						if(Bukkit.getPlayer(args[1]) != null) {
-							if(args[2].equalsIgnoreCase("crystal") || args[2].equalsIgnoreCase("ruby") || args[2].equalsIgnoreCase("vulcanic") || args[2].equalsIgnoreCase("radioactive") || args[2].equalsIgnoreCase("mystic")) {
+			if (p.hasPermission("leaffragmentos.admin")) {
+				if (args.length == 4) {
+					if (args[0].equalsIgnoreCase("give")) {
+						if (Bukkit.getPlayer(args[1]) != null) {
+							if (args[2].equalsIgnoreCase("crystal") || args[2].equalsIgnoreCase("ruby") || args[2].equalsIgnoreCase("vulcanic") || args[2].equalsIgnoreCase("radioactive") || args[2].equalsIgnoreCase("mystic")) {
 								Player target = Bukkit.getPlayer(args[1]);
 								int count;
 								try {
 									count = Integer.parseInt(args[3]);
-								}catch(NumberFormatException e) {
+								} catch (NumberFormatException e) {
 									p.sendMessage("§cA quantidade inserida não é válida!");
 									return true;
 								}
 								
-								if(args[2].equalsIgnoreCase("crystal")) {
+								if (args[2].equalsIgnoreCase("crystal")) {
 									ItemStack item = getCrystal();
 									item.setAmount(count);
 									target.getInventory().addItem(item);
 								}
-								if(args[2].equalsIgnoreCase("ruby")) {
+								if (args[2].equalsIgnoreCase("ruby")) {
 									ItemStack item = getRuby();
 									item.setAmount(count);
 									target.getInventory().addItem(item);
 								}
-								if(args[2].equalsIgnoreCase("vulcanic")) {
+								if (args[2].equalsIgnoreCase("vulcanic")) {
 									ItemStack item = getVulcanic();
 									item.setAmount(count);
 									target.getInventory().addItem(item);
 								}
-								if(args[2].equalsIgnoreCase("radioactive")) {
+								if (args[2].equalsIgnoreCase("radioactive")) {
 									ItemStack item = getRadioactive();
 									item.setAmount(count);
 									target.getInventory().addItem(item);
 								}
-								if(args[2].equalsIgnoreCase("mystic")) {
+								if (args[2].equalsIgnoreCase("mystic")) {
 									ItemStack item = getMystic();
 									item.setAmount(count);
 									target.getInventory().addItem(item);
 								}
 								p.sendMessage("§aSucesso! Transação feita com sucesso...");
-							}else {
+							} else {
 								p.sendMessage("§cEste tipo de fragmento não foi encontrado!");
 							}
-						}else {
+						} else {
 							p.sendMessage("§cEste jogador não existe ou está offline no momento!");
 						}
 					}
@@ -179,13 +160,59 @@ public class FragmentosCmd implements CommandExecutor {
 				}
 			}
 			
-			Inventory inv = Bukkit.createInventory(null, (4*9), "§a§e§f§0§lBanco de Fragmentos");
+			Inventory inv = Bukkit.createInventory(null, (4 * 9), "§a§e§f§0§lBanco de Fragmentos");
 			
-			inv.setItem(10, getCrystal());
-			inv.setItem(12, getRuby());
-			inv.setItem(14, getVulcanic());
-			inv.setItem(16, getRadioactive());
-			inv.setItem(22, getMystic());
+			ItemStack i1 = getCrystal();
+			ItemStack i2 = getRuby();
+			ItemStack i3 = getVulcanic();
+			ItemStack i4 = getRadioactive();
+			ItemStack i5 = getMystic();
+			
+			List<String> lore1 = i1.getItemMeta().getLore();
+			lore1.add("");
+			lore1.add("§eClique esquerdo para retirar um");
+			lore1.add("§eShift + Clique esquerdo para retirar todos");
+			lore1.add("§6Clique direito para depositar um");
+			lore1.add("§6Shift + Clique direito para depositar todos");
+			i1.getItemMeta().setLore(lore1);
+			
+			List<String> lore2 = i2.getItemMeta().getLore();
+			lore2.add("");
+			lore2.add("§eClique esquerdo para retirar um");
+			lore2.add("§eShift + Clique esquerdo para retirar todos");
+			lore2.add("§6Clique direito para depositar um");
+			lore2.add("§6Shift + Clique direito para depositar todos");
+			i2.getItemMeta().setLore(lore2);
+			
+			List<String> lore3 = i3.getItemMeta().getLore();
+			lore3.add("");
+			lore3.add("§eClique esquerdo para retirar um");
+			lore3.add("§eShift + Clique esquerdo para retirar todos");
+			lore3.add("§6Clique direito para depositar um");
+			lore3.add("§6Shift + Clique direito para depositar todos");
+			i3.getItemMeta().setLore(lore3);
+			
+			List<String> lore4 = i4.getItemMeta().getLore();
+			lore4.add("");
+			lore4.add("§eClique esquerdo para retirar um");
+			lore4.add("§eShift + Clique esquerdo para retirar todos");
+			lore4.add("§6Clique direito para depositar um");
+			lore4.add("§6Shift + Clique direito para depositar todos");
+			i4.getItemMeta().setLore(lore4);
+			
+			List<String> lore5 = i5.getItemMeta().getLore();
+			lore5.add("");
+			lore5.add("§eClique esquerdo para retirar um");
+			lore5.add("§eShift + Clique esquerdo para retirar todos");
+			lore5.add("§6Clique direito para depositar um");
+			lore5.add("§6Shift + Clique direito para depositar todos");
+			i5.getItemMeta().setLore(lore5);
+			
+			inv.setItem(10, i1);
+			inv.setItem(12, i2);
+			inv.setItem(14, i3);
+			inv.setItem(16, i4);
+			inv.setItem(22, i5);
 			
 			p.openInventory(inv);
 		}

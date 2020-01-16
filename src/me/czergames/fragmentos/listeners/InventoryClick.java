@@ -15,10 +15,10 @@ public class InventoryClick implements Listener {
 	public void onInventoryClick(InventoryClickEvent event) {
 		Player p = (Player) event.getWhoClicked();
 		
-		if (event.getClickedInventory().getTitle().equals("§a§e§f§0§lBanco de Fragmentos")) {
+		if (event.getInventory().getTitle().equals("§a§e§f§0§lBanco de Fragmentos")) {
 			event.setCancelled(true);
 			
-			if (event.getCurrentItem().equals(FragmentosCmd.getCrystal())) {
+			if (event.getSlot() == 10) {
 				if (event.getClick().equals(ClickType.LEFT)) {
 					if (MetodosSQL.getFragmentos(p, "crystal") >= 1) {
 						p.getInventory().addItem(FragmentosCmd.getCrystal());
@@ -67,7 +67,7 @@ public class InventoryClick implements Listener {
 					}
 				}
 			}
-			if (event.getCurrentItem().equals(FragmentosCmd.getRuby())) {
+			if (event.getSlot() == 12) {
 				if (event.getClick().equals(ClickType.LEFT)) {
 					if (MetodosSQL.getFragmentos(p, "crystal") >= 1) {
 						p.getInventory().addItem(FragmentosCmd.getCrystal());
@@ -116,7 +116,7 @@ public class InventoryClick implements Listener {
 					}
 				}
 			}
-			if (event.getCurrentItem().equals(FragmentosCmd.getVulcanic())) {
+			if (event.getSlot() == 14) {
 				if (event.getClick().equals(ClickType.LEFT)) {
 					if (MetodosSQL.getFragmentos(p, "crystal") >= 1) {
 						p.getInventory().addItem(FragmentosCmd.getCrystal());
@@ -165,7 +165,7 @@ public class InventoryClick implements Listener {
 					}
 				}
 			}
-			if (event.getCurrentItem().equals(FragmentosCmd.getRadioactive())) {
+			if (event.getSlot() == 16) {
 				if (event.getClick().equals(ClickType.LEFT)) {
 					if (MetodosSQL.getFragmentos(p, "crystal") >= 1) {
 						p.getInventory().addItem(FragmentosCmd.getCrystal());
@@ -214,7 +214,7 @@ public class InventoryClick implements Listener {
 					}
 				}
 			}
-			if (event.getCurrentItem().equals(FragmentosCmd.getMystic())) {
+			if (event.getSlot() == 22) {
 				if (event.getClick().equals(ClickType.LEFT)) {
 					if (MetodosSQL.getFragmentos(p, "crystal") >= 1) {
 						p.getInventory().addItem(FragmentosCmd.getCrystal());
