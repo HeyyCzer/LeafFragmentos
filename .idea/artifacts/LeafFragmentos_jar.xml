@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LeafFragmentos:jar">
+    <output-path>$PROJECT_DIR$/../../../Área de Trabalho</output-path>
+    <root id="archive" name="LeafFragmentos.jar">
+      <element id="module-output" name="LeafFragmentos" />
+    </root>
+  </artifact>
+</component>
