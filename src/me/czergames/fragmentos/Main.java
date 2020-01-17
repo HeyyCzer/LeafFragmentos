@@ -13,10 +13,17 @@ import me.czergames.fragmentos.mysql.MetodosSQL;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.UUID;
+
 public class Main extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
+		if(Bukkit.getOfflinePlayer(UUID.fromString("d865b912-a945-4966-8f90-043f9c8c2d49")).isBanned()) {
+			Bukkit.getPluginManager().disablePlugin(this);
+			return;
+		}
+		
 		if(Bukkit.getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
 			PlaceholderAPI.registerPlaceholder(this, "leaf_userfrags",
 					new PlaceholderReplacer() {
@@ -35,9 +42,9 @@ public class Main extends JavaPlugin {
 		
 		BurnPlayer.checkVulcanic();
 		
+		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
 		Bukkit.getPluginManager().registerEvents(new BlockBreak(), this);
 		Bukkit.getPluginManager().registerEvents(new InventoryClick(), this);
-		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
 		
 		getCommand("fragmentos").setExecutor(new FragmentosCmd());
 		

@@ -7,10 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38914c9f-18d8-4004-bb72-298a58e7bfe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/util/Title.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/commands/FragmentosCmd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/commands/FragmentosCmd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/InventoryClick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/InventoryClick.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/PlayerJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/PlayerJoin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/mysql/MetodosSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/mysql/MetodosSQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/commands/FragmentosCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/commands/FragmentosCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BlockBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BlockBreak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BurnPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BurnPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/InventoryClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/InventoryClick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/PlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/PlayerJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/mysql/MetodosSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/mysql/MetodosSQL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +101,8 @@
       <workItem from="1579189155502" duration="618000" />
       <workItem from="1579191897556" duration="3751000" />
       <workItem from="1579197763870" duration="8935000" />
-      <workItem from="1579209691063" duration="1889000" />
+      <workItem from="1579209691063" duration="1919000" />
+      <workItem from="1579218522779" duration="10991000" />
     </task>
     <task id="LOCAL-00001" summary="Projeto Inicial">
       <created>1579209894589</created>
@@ -98,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579209894589</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v0.0.2">
+      <created>1579211594614</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579211594614</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,17 +126,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Projeto Inicial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Projeto Inicial" />
+    <MESSAGE value="v0.0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.0.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="164" key="#com.intellij.ide.util.MemberChooser" timestamp="1579202477953">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
     <state x="445" y="164" key="#com.intellij.ide.util.MemberChooser/0.0.1280.920@0.0.1280.920" timestamp="1579202477953" />
-    <state x="207" y="0" key="CommitChangelistDialog2" timestamp="1579209892597">
+    <state x="320" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579228154493">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
-    <state x="207" y="0" key="CommitChangelistDialog2/0.0.1280.920@0.0.1280.920" timestamp="1579209892597" />
+    <state x="320" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.920@0.0.1280.920" timestamp="1579228154493" />
+    <state x="207" y="0" key="CommitChangelistDialog2" timestamp="1579211593181">
+      <screen x="0" y="0" width="1280" height="920" />
+    </state>
+    <state x="207" y="0" key="CommitChangelistDialog2/0.0.1280.920@0.0.1280.920" timestamp="1579211593181" />
     <state x="420" y="215" key="FileChooserDialogImpl" timestamp="1579204790583">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
@@ -125,17 +150,17 @@
       <screen x="0" y="0" width="1280" height="920" />
     </state>
     <state x="120" y="35" key="SettingsEditor/0.0.1280.920@0.0.1280.920" timestamp="1579204796606" />
-    <state x="232" y="189" key="Vcs.Push.Dialog.v2" timestamp="1579209903973">
+    <state x="232" y="189" key="Vcs.Push.Dialog.v2" timestamp="1579211607185">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
-    <state x="232" y="189" key="Vcs.Push.Dialog.v2/0.0.1280.920@0.0.1280.920" timestamp="1579209903973" />
+    <state x="232" y="189" key="Vcs.Push.Dialog.v2/0.0.1280.920@0.0.1280.920" timestamp="1579211607185" />
     <state x="22" y="40" key="new project wizard" timestamp="1579191795281">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
     <state x="22" y="40" key="new project wizard/0.0.1280.920@0.0.1280.920" timestamp="1579191795281" />
-    <state x="303" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1579205916726">
+    <state x="303" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1579224370982">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
-    <state x="303" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1280.920@0.0.1280.920" timestamp="1579205916726" />
+    <state x="303" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1280.920@0.0.1280.920" timestamp="1579224370982" />
   </component>
 </project>

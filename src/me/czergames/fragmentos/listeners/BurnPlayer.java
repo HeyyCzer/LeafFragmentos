@@ -12,12 +12,20 @@ public class BurnPlayer {
 			@Override
 			public void run() {
 				for(Player p : Bukkit.getOnlinePlayers()) {
-					if(p.getItemInHand().equals(FragmentosCmd.getVulcanic())) {
+					if(!p.getItemInHand().hasItemMeta()) continue;
+					if(!p.getItemInHand().getItemMeta().hasDisplayName()) continue;
+					if(!p.getItemInHand().getItemMeta().hasLore()) continue;
+					
+					if(p.getItemInHand().getItemMeta().getDisplayName().equals(
+							FragmentosCmd.getVulcanic().getItemMeta().getDisplayName())
+							&& p.getItemInHand().getItemMeta().getLore().equals(
+									FragmentosCmd.getVulcanic().getItemMeta().getLore())) {
+						
 						p.setFireTicks(40);
 					}
 				}
 			}
 		}, 0, 10);
 	}
-	
+
 }

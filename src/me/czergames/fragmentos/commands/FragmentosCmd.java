@@ -1,5 +1,6 @@
 package me.czergames.fragmentos.commands;
 
+import me.czergames.fragmentos.mysql.MetodosSQL;
 import me.czergames.fragmentos.util.CustomSkull;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -13,6 +14,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 public class FragmentosCmd implements CommandExecutor {
 	
@@ -54,7 +56,7 @@ public class FragmentosCmd implements CommandExecutor {
 		ItemStack item = CustomSkull.getSkull("c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071");
 		ItemMeta itemmeta = item.getItemMeta();
 		
-		itemmeta.setDisplayName("§6Rocha Vulcânica");
+		itemmeta.setDisplayName("§6Fragmento de Rocha Vulcânica");
 		itemmeta.setLore(Arrays.asList(
 				"§7\"Fragmento vulcânico, extraído cuidadosamente",
 				"§7do vulcão Osorno, no Chile.",
@@ -72,7 +74,7 @@ public class FragmentosCmd implements CommandExecutor {
 		ItemStack item = CustomSkull.getSkull("dc6bacd36ed60f533138e759c425946222b78eda6b616216f6dcc08e90d33e");
 		ItemMeta itemmeta = item.getItemMeta();
 		
-		itemmeta.setDisplayName("§aRocha Radioativa");
+		itemmeta.setDisplayName("§aFragmento de Rocha Radioativa");
 		itemmeta.setLore(Arrays.asList(
 				"§7\"Pedaço radioativo retirado de Chernobyl.",
 				"§7Apesar de ser altamente radioativo, cientistas",
@@ -163,50 +165,27 @@ public class FragmentosCmd implements CommandExecutor {
 			Inventory inv = Bukkit.createInventory(null, (4 * 9), "§a§e§f§0§lBanco de Fragmentos");
 			
 			ItemStack i1 = getCrystal();
+			ItemMeta i1m = i1.getItemMeta();
 			ItemStack i2 = getRuby();
+			ItemMeta i2m = i2.getItemMeta();
 			ItemStack i3 = getVulcanic();
+			ItemMeta i3m = i3.getItemMeta();
 			ItemStack i4 = getRadioactive();
+			ItemMeta i4m = i4.getItemMeta();
 			ItemStack i5 = getMystic();
+			ItemMeta i5m = i5.getItemMeta();
 			
-			List<String> lore1 = i1.getItemMeta().getLore();
-			lore1.add("");
-			lore1.add("§eClique esquerdo para retirar um");
-			lore1.add("§eShift + Clique esquerdo para retirar todos");
-			lore1.add("§6Clique direito para depositar um");
-			lore1.add("§6Shift + Clique direito para depositar todos");
-			i1.getItemMeta().setLore(lore1);
+			i1m.setLore(getLore(p, i1));
+			i2m.setLore(getLore(p, i2));
+			i3m.setLore(getLore(p, i3));
+			i4m.setLore(getLore(p, i4));
+			i5m.setLore(getLore(p, i5));
 			
-			List<String> lore2 = i2.getItemMeta().getLore();
-			lore2.add("");
-			lore2.add("§eClique esquerdo para retirar um");
-			lore2.add("§eShift + Clique esquerdo para retirar todos");
-			lore2.add("§6Clique direito para depositar um");
-			lore2.add("§6Shift + Clique direito para depositar todos");
-			i2.getItemMeta().setLore(lore2);
-			
-			List<String> lore3 = i3.getItemMeta().getLore();
-			lore3.add("");
-			lore3.add("§eClique esquerdo para retirar um");
-			lore3.add("§eShift + Clique esquerdo para retirar todos");
-			lore3.add("§6Clique direito para depositar um");
-			lore3.add("§6Shift + Clique direito para depositar todos");
-			i3.getItemMeta().setLore(lore3);
-			
-			List<String> lore4 = i4.getItemMeta().getLore();
-			lore4.add("");
-			lore4.add("§eClique esquerdo para retirar um");
-			lore4.add("§eShift + Clique esquerdo para retirar todos");
-			lore4.add("§6Clique direito para depositar um");
-			lore4.add("§6Shift + Clique direito para depositar todos");
-			i4.getItemMeta().setLore(lore4);
-			
-			List<String> lore5 = i5.getItemMeta().getLore();
-			lore5.add("");
-			lore5.add("§eClique esquerdo para retirar um");
-			lore5.add("§eShift + Clique esquerdo para retirar todos");
-			lore5.add("§6Clique direito para depositar um");
-			lore5.add("§6Shift + Clique direito para depositar todos");
-			i5.getItemMeta().setLore(lore5);
+			i1.setItemMeta(i1m);
+			i2.setItemMeta(i2m);
+			i3.setItemMeta(i3m);
+			i4.setItemMeta(i4m);
+			i5.setItemMeta(i5m);
 			
 			inv.setItem(10, i1);
 			inv.setItem(12, i2);
@@ -217,6 +196,31 @@ public class FragmentosCmd implements CommandExecutor {
 			p.openInventory(inv);
 		}
 		return false;
+	}
+	
+	private List<String> getLore(Player p, ItemStack i) {
+		List<String> lore = i.getItemMeta().getLore();
+		if(i.getItemMeta().getDisplayName().contains("Cristal")) {
+			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "crystal") + " §fdestes fragmentos...");
+		}
+		else if(i.getItemMeta().getDisplayName().contains("Ruby")) {
+			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "ruby") + " §fdestes fragmentos...");
+		}
+		else if(i.getItemMeta().getDisplayName().contains("Vulcânica")) {
+			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "vulcanic") + " §fdestes fragmentos...");
+		}
+		else if(i.getItemMeta().getDisplayName().contains("Radioativa")) {
+			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "radioactive") + " §fdestes fragmentos...");
+		}
+		else if(i.getItemMeta().getDisplayName().contains("Místico")) {
+			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "mystic") + " §fdestes fragmentos...");
+		}
+		lore.add("");
+		lore.add("§eClique esquerdo para retirar um");
+		lore.add("§eShift + Clique esquerdo para retirar todos");
+		lore.add("§6Clique direito para depositar um");
+		lore.add("§6Shift + Clique direito para depositar todos");
+		return lore;
 	}
 	
 }
