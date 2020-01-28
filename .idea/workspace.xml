@@ -7,27 +7,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38914c9f-18d8-4004-bb72-298a58e7bfe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/util/Title.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/configuracao.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/util/Configs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/util/Utilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeafFragmentos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LeafFragmentos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/commands/FragmentosCmd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/commands/FragmentosCmd.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BurnPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/InventoryClick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/InventoryClick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/PlayerJoin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/PlayerJoin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/mysql/MetodosSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/mysql/MetodosSQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BlockBreak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/listeners/BlockBreak.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/mysql/ConectarSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/me/czergames/fragmentos/mysql/ConectarSQL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LeafFragmentos/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LeafFragmentos/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/commands/FragmentosCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/commands/FragmentosCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BlockBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BlockBreak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BurnPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/BurnPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/InventoryClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/InventoryClick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/PlayerJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/listeners/PlayerJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/mysql/MetodosSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/mysql/MetodosSQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/me/czergames/fragmentos/mysql/ConectarSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/czergames/fragmentos/mysql/ConectarSQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,23 +64,26 @@
     </option>
   </component>
   <component name="ProjectId" id="1WSTWPABSqWJxvMoI8dN5AEa17l" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Área de Trabalho" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Área de Trabalho/API/Minecraft/PermissionsEx.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1657754" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -102,7 +122,17 @@
       <workItem from="1579191897556" duration="3751000" />
       <workItem from="1579197763870" duration="8935000" />
       <workItem from="1579209691063" duration="1919000" />
-      <workItem from="1579218522779" duration="10991000" />
+      <workItem from="1579218522779" duration="11047000" />
+      <workItem from="1579236419344" duration="42000" />
+      <workItem from="1579528131817" duration="1387000" />
+      <workItem from="1579530726021" duration="2175000" />
+      <workItem from="1579551854894" duration="1490000" />
+      <workItem from="1579626459247" duration="1258000" />
+      <workItem from="1579633064202" duration="1668000" />
+      <workItem from="1580078599663" duration="3983000" />
+      <workItem from="1580143058357" duration="1021000" />
+      <workItem from="1580153086611" duration="100000" />
+      <workItem from="1580252565071" duration="159000" />
     </task>
     <task id="LOCAL-00001" summary="Projeto Inicial">
       <created>1579209894589</created>
@@ -118,42 +148,67 @@
       <option name="project" value="LOCAL" />
       <updated>1579211594614</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bug Fixes and BlockBreak implementation">
+      <created>1579235594225</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579235594225</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Projeto Inicial" />
     <MESSAGE value="v0.0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.0.2" />
+    <MESSAGE value="Bug Fixes and BlockBreak implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes and BlockBreak implementation" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#SQL_Dialects" timestamp="1579531041401">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1579531041401" />
+    <state x="552" y="179" key="#SQL_Resolution_Scopes" timestamp="1579533037476">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#SQL_Resolution_Scopes/0.0.1920.1040@0.0.1920.1040" timestamp="1579533037476" />
     <state x="445" y="164" key="#com.intellij.ide.util.MemberChooser" timestamp="1579202477953">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
     <state x="445" y="164" key="#com.intellij.ide.util.MemberChooser/0.0.1280.920@0.0.1280.920" timestamp="1579202477953" />
-    <state x="320" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579228154493">
-      <screen x="0" y="0" width="1280" height="920" />
+    <state x="480" y="213" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579632849589">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="320" y="188" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.920@0.0.1280.920" timestamp="1579228154493" />
-    <state x="207" y="0" key="CommitChangelistDialog2" timestamp="1579211593181">
+    <state x="480" y="213" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579632849589" />
+    <state x="207" y="0" key="CommitChangelistDialog2" timestamp="1579235591148">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
-    <state x="207" y="0" key="CommitChangelistDialog2/0.0.1280.920@0.0.1280.920" timestamp="1579211593181" />
-    <state x="420" y="215" key="FileChooserDialogImpl" timestamp="1579204790583">
-      <screen x="0" y="0" width="1280" height="920" />
+    <state x="207" y="0" key="CommitChangelistDialog2/0.0.1280.920@0.0.1280.920" timestamp="1579235591148" />
+    <state x="630" y="243" key="FileChooserDialogImpl" timestamp="1580252641973">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="420" y="215" key="FileChooserDialogImpl/0.0.1280.920@0.0.1280.920" timestamp="1579204790583" />
-    <state x="120" y="35" key="SettingsEditor" timestamp="1579204796606">
-      <screen x="0" y="0" width="1280" height="920" />
+    <state x="630" y="243" key="FileChooserDialogImpl/0.0.1920.1040/-1280.52.1280.984@0.0.1920.1040" timestamp="1580252641973" />
+    <state x="180" y="40" key="SettingsEditor" timestamp="1580252645330">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="120" y="35" key="SettingsEditor/0.0.1280.920@0.0.1280.920" timestamp="1579204796606" />
-    <state x="232" y="189" key="Vcs.Push.Dialog.v2" timestamp="1579211607185">
+    <state x="180" y="40" key="SettingsEditor/0.0.1920.1040/-1280.52.1280.984@0.0.1920.1040" timestamp="1580252645330" />
+    <state x="180" y="40" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579531711225" />
+    <state width="200" height="523" key="SqlResolveConfigurable" timestamp="1579533036378">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="200" height="523" key="SqlResolveConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1579533036378" />
+    <state x="232" y="189" key="Vcs.Push.Dialog.v2" timestamp="1579235606516">
       <screen x="0" y="0" width="1280" height="920" />
     </state>
-    <state x="232" y="189" key="Vcs.Push.Dialog.v2/0.0.1280.920@0.0.1280.920" timestamp="1579211607185" />
+    <state x="232" y="189" key="Vcs.Push.Dialog.v2/0.0.1280.920@0.0.1280.920" timestamp="1579235606516" />
     <state x="22" y="40" key="new project wizard" timestamp="1579191795281">
       <screen x="0" y="0" width="1280" height="920" />
     </state>

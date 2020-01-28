@@ -13,15 +13,15 @@ import me.czergames.fragmentos.mysql.MetodosSQL;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.UUID;
+import java.io.File;
 
 public class Main extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		if(Bukkit.getOfflinePlayer(UUID.fromString("d865b912-a945-4966-8f90-043f9c8c2d49")).isBanned()) {
-			Bukkit.getPluginManager().disablePlugin(this);
-			return;
+		File f = new File("configuracao.yml");
+		if(!f.exists()) {
+			saveResource(f.getPath(), false);
 		}
 		
 		if(Bukkit.getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
@@ -33,7 +33,8 @@ public class Main extends JavaPlugin {
 						}
 					}
 			);
-		}else {
+		}
+		else {
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
 		}
@@ -41,12 +42,6 @@ public class Main extends JavaPlugin {
 		ConectarSQL.open();
 		
 		BurnPlayer.checkVulcanic();
-		
-		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
-		Bukkit.getPluginManager().registerEvents(new BlockBreak(), this);
-		Bukkit.getPluginManager().registerEvents(new InventoryClick(), this);
-		
-		getCommand("fragmentos").setExecutor(new FragmentosCmd());
 		
 		Bukkit.getConsoleSender().sendMessage("§aLeafFragmentos §ffoi ativado com sucesso!");
 		Bukkit.getConsoleSender().sendMessage("§fVersion §a" + getDescription().getVersion());
@@ -58,5 +53,19 @@ public class Main extends JavaPlugin {
 		ConectarSQL.close();
 		
 		Bukkit.getConsoleSender().sendMessage("§cLeafFragmentos §ffoi desativado com sucesso!");
+	}
+	
+	private void registerStuff() {
+		getCommand("fragmentos").setExecutor(new FragmentosCmd());
+		
+		Bukkit.getPluginManager().registerEvents(new PlayerJoin(), this);
+		Bukkit.getPluginManager().registerEvents(new BlockBreak(), this);
+		Bukkit.getPluginManager().registerEvents(new InventoryClick(), this);
+	}
+	private void registerSchedulers() {
+		Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+			ConectarSQL.close();
+			ConectarSQL.open();
+		}, (2*60)*60*20, (2*60)*60*20);
 	}
 }

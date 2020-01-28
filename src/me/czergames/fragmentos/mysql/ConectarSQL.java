@@ -11,21 +11,18 @@ public class ConectarSQL {
 	
 	public static void open() {
 		if (isOpen()) return;
-		//  server_1309  L6oD5tfGRTul 144.217.10.229
 		try {
 			String url = "jdbc:mysql://HOST:PORT/DATABASE";
-			url = url.replaceAll("HOST", "144.217.10.229");
+			url = url.replaceAll("HOST", "142.44.170.38");
 			url = url.replaceAll("PORT", "3306");
-			url = url.replaceAll("DATABASE", "server_1309");
+			url = url.replaceAll("DATABASE", "s345_vitor");
 			
-			con = DriverManager.getConnection(url, "server_1309", "L6oD5tfGRTuI");
-			
+			con = DriverManager.getConnection(url, "u345_tRAyu1Eh1w", "04x2GKecwb4NoZrI6sy6G61z");
 			createTable();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
-	
 	public static void close() {
 		if (isClosed()) return;
 		
@@ -39,7 +36,6 @@ public class ConectarSQL {
 	private static boolean isOpen() {
 		return con != null;
 	}
-	
 	private static boolean isClosed() {
 		return con == null;
 	}

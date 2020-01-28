@@ -1,6 +1,8 @@
 package me.czergames.fragmentos.commands;
 
+import me.czergames.fragmentos.Main;
 import me.czergames.fragmentos.mysql.MetodosSQL;
+import me.czergames.fragmentos.util.Configs;
 import me.czergames.fragmentos.util.CustomSkull;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -11,12 +13,18 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 public class FragmentosCmd implements CommandExecutor {
+	
+	private Configs config() {
+		Configs config = new Configs("configuracao.yml");
+		config.setPlugin(Main.getPlugin(Main.class));
+		
+		return config;
+	}
+	
 	
 	public static ItemStack getCrystal() {
 		ItemStack item = CustomSkull.getSkull("3a5a0715c62122ded65af4eae0969f23f571b0afa50cf93fc9ee2af4c7b34e12");
@@ -112,53 +120,80 @@ public class FragmentosCmd implements CommandExecutor {
 			Player p = (Player) sender;
 			
 			if (p.hasPermission("leaffragmentos.admin")) {
-				if (args.length == 4) {
+				if (args.length > 0) {
 					if (args[0].equalsIgnoreCase("give")) {
-						if (Bukkit.getPlayer(args[1]) != null) {
-							if (args[2].equalsIgnoreCase("crystal") || args[2].equalsIgnoreCase("ruby") || args[2].equalsIgnoreCase("vulcanic") || args[2].equalsIgnoreCase("radioactive") || args[2].equalsIgnoreCase("mystic")) {
-								Player target = Bukkit.getPlayer(args[1]);
-								int count;
-								try {
-									count = Integer.parseInt(args[3]);
-								} catch (NumberFormatException e) {
-									p.sendMessage("§cA quantidade inserida não é válida!");
+						if (args.length == 4) {
+							if (!p.hasPermission("leaffragmentos.give")) {
+								p.sendMessage("§cVocê não tem permissão para executar este comando!");
+								return true;
+							}
+							if (Bukkit.getPlayer(args[1]) != null) {
+								if (args[2].equalsIgnoreCase("crystal") || args[2].equalsIgnoreCase("ruby") || args[2].equalsIgnoreCase("vulcanic") || args[2].equalsIgnoreCase("radioactive") || args[2].equalsIgnoreCase("mystic")) {
+									Player target = Bukkit.getPlayer(args[1]);
+									int count;
+									try {
+										count = Integer.parseInt(args[3]);
+									} catch (NumberFormatException e) {
+										p.sendMessage("§cA quantidade inserida não é válida!");
+										return true;
+									}
+									
+									if (args[2].equalsIgnoreCase("crystal")) {
+										ItemStack item = getCrystal();
+										item.setAmount(count);
+										target.getInventory().addItem(item);
+									}
+									if (args[2].equalsIgnoreCase("ruby")) {
+										ItemStack item = getRuby();
+										item.setAmount(count);
+										target.getInventory().addItem(item);
+									}
+									if (args[2].equalsIgnoreCase("vulcanic")) {
+										ItemStack item = getVulcanic();
+										item.setAmount(count);
+										target.getInventory().addItem(item);
+									}
+									if (args[2].equalsIgnoreCase("radioactive")) {
+										ItemStack item = getRadioactive();
+										item.setAmount(count);
+										target.getInventory().addItem(item);
+									}
+									if (args[2].equalsIgnoreCase("mystic")) {
+										ItemStack item = getMystic();
+										item.setAmount(count);
+										target.getInventory().addItem(item);
+									}
+									p.sendMessage("§aSucesso! Transação feita com sucesso...");
+									return true;
+								} else {
+									p.sendMessage("§cEste tipo de fragmento não foi encontrado!");
 									return true;
 								}
-								
-								if (args[2].equalsIgnoreCase("crystal")) {
-									ItemStack item = getCrystal();
-									item.setAmount(count);
-									target.getInventory().addItem(item);
-								}
-								if (args[2].equalsIgnoreCase("ruby")) {
-									ItemStack item = getRuby();
-									item.setAmount(count);
-									target.getInventory().addItem(item);
-								}
-								if (args[2].equalsIgnoreCase("vulcanic")) {
-									ItemStack item = getVulcanic();
-									item.setAmount(count);
-									target.getInventory().addItem(item);
-								}
-								if (args[2].equalsIgnoreCase("radioactive")) {
-									ItemStack item = getRadioactive();
-									item.setAmount(count);
-									target.getInventory().addItem(item);
-								}
-								if (args[2].equalsIgnoreCase("mystic")) {
-									ItemStack item = getMystic();
-									item.setAmount(count);
-									target.getInventory().addItem(item);
-								}
-								p.sendMessage("§aSucesso! Transação feita com sucesso...");
 							} else {
-								p.sendMessage("§cEste tipo de fragmento não foi encontrado!");
+								p.sendMessage("§cEste jogador não existe ou está offline no momento!");
+								return true;
 							}
 						} else {
-							p.sendMessage("§cEste jogador não existe ou está offline no momento!");
+							p.sendMessage("§cUso incorreto! Utilize §f/fragmentos give <player> <fragmento> <quantidade>");
+						}
+						return true;
+					}
+					
+					if (args[0].equalsIgnoreCase("reload")) {
+						if (!p.hasPermission("leaffragmentos.reload")) {
+							p.sendMessage("§cVocê não tem permissão para executar este comando!");
+							return true;
+						}
+						try {
+							config().saveConfig();
+							config().reloadConfig();
+							p.sendMessage("§aConfiguração recarregada com sucesso!");
+							return true;
+						} catch (Exception e) {
+							p.sendMessage("§cHouve um erro ao recarregar a configuração! Verifique o console...");
+							return true;
 						}
 					}
-					return true;
 				}
 			}
 			
@@ -200,19 +235,15 @@ public class FragmentosCmd implements CommandExecutor {
 	
 	private List<String> getLore(Player p, ItemStack i) {
 		List<String> lore = i.getItemMeta().getLore();
-		if(i.getItemMeta().getDisplayName().contains("Cristal")) {
+		if (i.getItemMeta().getDisplayName().contains("Cristal")) {
 			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "crystal") + " §fdestes fragmentos...");
-		}
-		else if(i.getItemMeta().getDisplayName().contains("Ruby")) {
+		} else if (i.getItemMeta().getDisplayName().contains("Ruby")) {
 			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "ruby") + " §fdestes fragmentos...");
-		}
-		else if(i.getItemMeta().getDisplayName().contains("Vulcânica")) {
+		} else if (i.getItemMeta().getDisplayName().contains("Vulcânica")) {
 			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "vulcanic") + " §fdestes fragmentos...");
-		}
-		else if(i.getItemMeta().getDisplayName().contains("Radioativa")) {
+		} else if (i.getItemMeta().getDisplayName().contains("Radioativa")) {
 			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "radioactive") + " §fdestes fragmentos...");
-		}
-		else if(i.getItemMeta().getDisplayName().contains("Místico")) {
+		} else if (i.getItemMeta().getDisplayName().contains("Místico")) {
 			lore.add("§fVocê possui §e" + MetodosSQL.getFragmentos(p, "mystic") + " §fdestes fragmentos...");
 		}
 		lore.add("");

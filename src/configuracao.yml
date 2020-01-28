@@ -1,0 +1,7 @@
+# Chances de ganhar fragmentos ao minerar
+chances:
+  crystal: 21
+  ruby: 15
+  vulcanic: 8
+  radioactive: 5
+  mystic: 1
